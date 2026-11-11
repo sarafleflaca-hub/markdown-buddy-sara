@@ -1,0 +1,61 @@
+---
+title: "Synthetic Retail Order Analysis — Script Documentation"
+author: "Sara Flefla"
+date: "November 11, 2026"
+output: html_document
+---
+
+> **AI Assistance Declaration:** ChatGPT (GPT-6, November 11, 2026) was used for documentation structure and wording suggestions. See `AI_Appendix.md` for prompts. I am responsible for checking the code and final interpretation.
+
+# Purpose
+
+The project explores how simulated order values vary across three shopping channels: online, in-store, and pickup.
+
+This document describes `analysis.R`, which creates a small synthetic dataset, checks its structure, summarizes a key measure, and saves a chart.
+
+## Inputs
+
+- A synthetic dataset generated directly in `analysis.R`.
+- R (version 4.2 or later recommended).
+- The `ggplot2` package.
+
+No external files or personal information are required.
+
+## Variables
+
+- `channel`: synthetic shopping channel (Online, In-store, or Pickup).
+- `order_value`: simulated order value in arbitrary currency units.
+- `items`: number of items in a simulated order.
+
+## Outputs
+
+- A summary table printed in the R console.
+- `summary_plot.png`, a boxplot saved in the working directory.
+
+## Workflow
+
+1. Set a random seed to make the generated data reproducible.
+2. Generate the synthetic observations.
+3. Inspect the data using `str()`, `head()`, and `summary()`.
+4. Group the observations and calculate a summary.
+5. Create and save a plot.
+
+## Example R Code
+
+The following example shows the general structure used in the script:
+
+```{r, eval=FALSE}
+set.seed(400)
+# Generate or import the synthetic data
+# Inspect the variables before summarising
+str(data)
+summary(data)
+```
+
+## Verification Notes
+
+Before treating the output as final, run `analysis.R` in RStudio or Posit Cloud. Confirm that the summary appears in the console and that `summary_plot.png` is created. Check that the group and measure column names match the plot mapping. Then knit this `.Rmd` file and review the rendered headings and code block.
+
+## Limitations
+
+The dataset is artificial and intentionally small. The results are examples only and should not be interpreted as evidence about a real population.
